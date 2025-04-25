@@ -1,0 +1,301 @@
+ID,Name,Age,Salary,Join_Date,Department,Performance_Score,Manager,Working_Hours,City
+1,Person_1,58,105663.78,2021-02-03,Finance,B,Manager_C,43,Chicago
+2,Person_2,60,58569.65,2021-03-04,Sales,B,Manager_B,32,Chicago
+3,Person_3,50,106571.75,2020-09-03,Marketing,D,Manager_C,40,Houston
+4,Person_4,44,104629.27,2021-04-14,Marketing,B,Manager_A,28,Los Angeles
+5,Person_5,35,87908.04,2022-04-28,HR,B,Manager_A,38,Chicago
+6,Person_6,37,91385.37,2020-09-28,Engineering,C,Manager_D,31,Houston
+7,Person_7,31,70115.36,2020-07-03,Marketing,C,Manager_C,38,Chicago
+8,Person_8,33,62300.07,2020-12-13,Finance,C,Manager_D,27,Los Angeles
+9,Person_9,65,82728.2,2020-02-29,Marketing,D,Manager_D,32,Phoenix
+10,Person_10,25,64814.85,2020-12-12,Finance,A,Manager_C,44,Houston
+11,Person_11,35,33757.62,2020-04-30,Sales,C,Manager_C,37,Phoenix
+12,Person_12,20,100082.83,2022-04-01,Marketing,D,Manager_C,46,Los Angeles
+13,Person_13,68,32336.16,2020-05-19,Sales,C,Manager_D,34,Los Angeles
+14,Person_14,54,30882.96,2022-07-18,Marketing,D,Manager_A,48,Houston
+15,Person_15,19,33008.38,2022-06-12,Marketing,A,Manager_D,31,Houston
+16,Person_16,22,114870.07,2020-08-28,Finance,D,Manager_D,35,Houston
+17,Person_17,25,101107.71,2021-09-15,Marketing,D,Manager_D,21,Houston
+18,Person_18,45,40799.8,2022-07-08,HR,C,Manager_A,41,Phoenix
+19,Person_19,32,75578.73,2021-06-28,HR,D,Manager_D,48,New York
+20,Person_20,55,34586.25,2020-05-27,Engineering,D,Manager_A,38,Chicago
+21,Person_21,61,64444.26,2020-11-13,Engineering,A,Manager_D,43,Los Angeles
+22,Person_22,40,83996.88,2020-05-14,Marketing,A,Manager_C,21,Los Angeles
+23,Person_23,45,55117.91,2021-11-08,Sales,A,Manager_A,23,Houston
+24,Person_24,19,111474.65,2021-08-14,HR,A,Manager_D,37,Los Angeles
+25,Person_25,59,101529.76,2020-01-13,Sales,B,Manager_D,39,Phoenix
+26,Person_26,45,115040.32,2020-09-01,Finance,D,Manager_C,42,Chicago
+27,Person_27,51,48664.52,2022-01-03,Marketing,A,Manager_A,48,Phoenix
+28,Person_28,33,80438.07,2022-12-02,Sales,A,Manager_D,31,Houston
+29,Person_29,27,119891.59,2020-03-12,HR,A,Manager_B,35,New York
+30,Person_30,55,31628.76,2020-04-17,Sales,A,Manager_C,23,Houston
+31,Person_31,30,31430.2,2021-12-17,HR,B,Manager_D,49,Houston
+32,Person_32,44,88475.69,2021-01-12,Marketing,C,Manager_B,20,Phoenix
+33,Person_33,48,91794.31,2022-04-23,Engineering,C,Manager_A,47,Chicago
+34,Person_34,40,82829.55,2020-05-24,Engineering,B,Manager_C,26,Phoenix
+35,Person_35,60,64817.89,2022-07-13,Finance,B,Manager_B,42,Los Angeles
+36,Person_36,41,82882.92,2021-10-23,HR,D,Manager_C,25,New York
+37,Person_37,63,36408.58,2020-12-31,Engineering,A,Manager_C,46,Phoenix
+38,Person_38,24,39615.73,2020-03-09,Marketing,B,Manager_D,27,Phoenix
+39,Person_39,37,84731.15,2020-02-05,Engineering,B,Manager_D,48,Chicago
+40,Person_40,60,109897.82,2020-12-28,Finance,A,Manager_D,49,Los Angeles
+41,Person_41,20,30894.27,2021-04-14,Finance,C,Manager_A,41,Phoenix
+42,Person_42,66,52907.02,2020-07-27,Sales,D,Manager_D,33,Chicago
+43,Person_43,68,50607.18,2021-07-11,HR,C,Manager_D,43,Phoenix
+44,Person_44,30,49561.15,2020-09-05,HR,B,Manager_D,48,Chicago
+45,Person_45,63,35080.52,2022-11-04,Finance,A,Manager_C,46,Houston
+46,Person_46,26,94841.08,2022-11-10,Finance,D,Manager_D,36,New York
+47,Person_47,65,46246.13,2020-08-15,HR,A,Manager_D,20,Los Angeles
+48,Person_48,36,88255.97,2020-05-08,HR,A,Manager_D,34,Chicago
+49,Person_49,54,31609.85,2021-07-28,Finance,B,Manager_C,39,Phoenix
+50,Person_50,42,69912.44,2021-02-23,Sales,D,Manager_B,40,Phoenix
+51,Person_51,26,65998.55,2020-06-24,Sales,B,Manager_C,22,Chicago
+52,Person_52,57,107568.84,2021-07-09,Engineering,D,Manager_C,40,New York
+53,Person_53,48,52808.97,2020-04-06,Marketing,C,Manager_B,40,Phoenix
+54,Person_54,38,63086.53,2022-05-04,Sales,D,Manager_B,20,New York
+55,Person_55,49,79368.16,2022-02-14,HR,D,Manager_B,32,Chicago
+56,Person_56,20,118239.56,2021-09-18,Finance,B,Manager_C,29,Chicago
+57,Person_57,44,116810.06,2022-07-19,Marketing,A,Manager_B,35,Los Angeles
+58,Person_58,26,65148.78,2020-06-05,Marketing,B,Manager_C,20,Chicago
+59,Person_59,51,32921.41,2021-05-20,Marketing,C,Manager_D,37,Phoenix
+60,Person_60,19,101417.78,2022-07-25,Finance,A,Manager_C,39,Phoenix
+61,Person_61,59,76646.16,2020-08-28,Sales,D,Manager_D,28,New York
+62,Person_62,64,88595.57,2021-05-04,Sales,D,Manager_D,25,Chicago
+63,Person_63,67,109944.26,2022-08-29,HR,A,Manager_D,41,Los Angeles
+64,Person_64,53,114074.4,2020-04-12,HR,D,Manager_A,46,Chicago
+65,Person_65,47,89758.25,2022-08-30,HR,D,Manager_B,31,Chicago
+66,Person_66,30,89770.05,2020-01-12,HR,D,Manager_C,47,Los Angeles
+67,Person_67,23,99544.41,2021-10-17,Engineering,A,Manager_D,38,Phoenix
+68,Person_68,42,32553.55,2022-11-16,Finance,D,Manager_D,40,Chicago
+69,Person_69,33,62062.55,2020-09-07,Sales,D,Manager_C,28,Los Angeles
+70,Person_70,22,57468.1,2021-05-08,Marketing,B,Manager_B,30,Chicago
+71,Person_71,32,66326.07,2022-03-24,Engineering,A,Manager_D,20,Phoenix
+72,Person_72,61,58362.93,2022-01-11,HR,B,Manager_C,48,Houston
+73,Person_73,23,78911.79,2021-08-19,Marketing,C,Manager_C,42,Phoenix
+74,Person_74,48,106966.93,2022-03-15,Finance,C,Manager_A,35,New York
+75,Person_75,42,52389.6,2020-06-27,Marketing,B,Manager_C,40,Houston
+76,Person_76,40,99640.73,2022-06-01,Sales,C,Manager_A,43,Chicago
+77,Person_77,28,35369.47,2020-03-04,Marketing,D,Manager_A,28,Los Angeles
+78,Person_78,61,106442.63,2020-06-16,Marketing,B,Manager_C,29,Chicago
+79,Person_79,55,62202.44,2022-03-26,Marketing,A,Manager_C,27,Los Angeles
+80,Person_80,27,47313.09,2020-06-22,Finance,D,Manager_B,49,Chicago
+81,Person_81,66,83059.18,2022-03-31,Engineering,A,Manager_B,33,New York
+82,Person_82,63,91122.86,2020-08-02,Sales,C,Manager_D,41,New York
+83,Person_83,37,74495.84,2022-01-13,HR,B,Manager_D,49,Houston
+84,Person_84,62,96096.73,2022-07-26,Marketing,B,Manager_A,28,Phoenix
+85,Person_85,22,105777.95,2022-04-25,Sales,D,Manager_A,42,New York
+86,Person_86,46,50735.24,2022-06-12,Engineering,B,Manager_A,32,Phoenix
+87,Person_87,42,91871.95,2020-07-24,Finance,C,Manager_D,31,Houston
+88,Person_88,61,108956.18,2022-04-02,HR,A,Manager_C,26,New York
+89,Person_89,61,84704.94,2020-09-26,Marketing,B,Manager_C,38,Houston
+90,Person_90,66,104497.27,2022-07-19,Marketing,A,Manager_C,24,Houston
+91,Person_91,52,70292.35,2022-03-14,Engineering,C,Manager_C,29,Phoenix
+92,Person_92,41,75446.18,2022-09-26,HR,D,Manager_D,48,Houston
+93,Person_93,36,61003.57,2021-07-08,Sales,A,Manager_D,32,Phoenix
+94,Person_94,45,84258.9,2020-03-29,HR,C,Manager_B,40,Houston
+95,Person_95,23,111001.35,2020-07-15,Engineering,B,Manager_D,35,Chicago
+96,Person_96,60,39842.89,2021-07-17,Sales,A,Manager_B,43,Los Angeles
+97,Person_97,36,71641.5,2022-10-17,Finance,D,Manager_B,21,Houston
+98,Person_98,68,51031.16,2021-07-09,Engineering,C,Manager_B,47,Houston
+99,Person_99,41,105860.87,2020-02-25,Sales,A,Manager_A,21,Phoenix
+100,Person_100,24,31690.72,2021-07-17,Marketing,D,Manager_B,43,Phoenix
+101,Person_101,53,75985.0,2020-09-09,HR,A,Manager_C,38,Chicago
+102,Person_102,44,92427.51,2022-02-02,Engineering,A,Manager_D,31,Chicago
+103,Person_103,59,56563.55,2022-12-24,HR,C,Manager_D,40,Chicago
+104,Person_104,31,48376.13,2021-08-24,Engineering,D,Manager_D,39,Los Angeles
+105,Person_105,27,88347.09,2020-02-09,Finance,D,Manager_C,45,Chicago
+106,Person_106,34,72048.25,2021-08-12,Sales,A,Manager_A,25,New York
+107,Person_107,68,94238.71,2021-08-31,Engineering,C,Manager_D,24,Phoenix
+108,Person_108,49,48607.5,2020-08-08,HR,C,Manager_D,41,New York
+109,Person_109,57,78976.26,2021-04-14,HR,A,Manager_D,33,Los Angeles
+110,Person_110,56,88603.68,2022-05-09,HR,C,Manager_D,25,New York
+111,Person_111,68,110590.12,2020-03-12,Sales,B,Manager_D,37,Houston
+112,Person_112,33,91715.92,2022-02-09,Marketing,B,Manager_C,32,Houston
+113,Person_113,67,88472.72,2020-06-18,Marketing,A,Manager_A,20,New York
+114,Person_114,66,37965.41,2022-12-06,Marketing,D,Manager_B,20,Los Angeles
+115,Person_115,34,64418.12,2022-10-02,HR,C,Manager_C,42,New York
+116,Person_116,35,101640.88,2022-06-09,Marketing,B,Manager_D,27,Los Angeles
+117,Person_117,36,36973.66,2022-03-03,Marketing,D,Manager_A,45,Houston
+118,Person_118,42,62174.83,2021-04-21,Sales,C,Manager_A,37,Los Angeles
+119,Person_119,22,117248.72,2021-03-02,HR,A,Manager_C,44,Houston
+120,Person_120,36,32997.03,2020-03-07,Engineering,A,Manager_C,47,Houston
+121,Person_121,30,48673.24,2021-01-13,Marketing,C,Manager_B,20,Houston
+122,Person_122,43,70582.1,2021-08-11,Finance,A,Manager_D,36,Chicago
+123,Person_123,56,103020.42,2021-10-17,Finance,C,Manager_C,23,Houston
+124,Person_124,23,40058.88,2020-11-19,Sales,B,Manager_A,35,Chicago
+125,Person_125,20,61485.72,2021-11-20,Marketing,B,Manager_C,37,Houston
+126,Person_126,44,87467.23,2020-01-10,Engineering,A,Manager_B,42,Chicago
+127,Person_127,42,62130.93,2022-11-11,Engineering,C,Manager_B,45,Phoenix
+128,Person_128,24,88529.18,2021-12-05,Finance,A,Manager_B,29,Chicago
+129,Person_129,41,69366.02,2021-08-29,Sales,C,Manager_B,23,Houston
+130,Person_130,46,119670.28,2022-12-05,Sales,B,Manager_C,20,Phoenix
+131,Person_131,52,33134.02,2020-09-16,Sales,A,Manager_A,20,New York
+132,Person_132,52,31318.78,2022-02-10,Marketing,B,Manager_A,21,Phoenix
+133,Person_133,24,65559.74,2020-02-20,Engineering,D,Manager_C,44,New York
+134,Person_134,55,32553.36,2021-01-13,Marketing,A,Manager_D,30,Chicago
+135,Person_135,28,40191.21,2022-04-08,Engineering,B,Manager_C,39,Los Angeles
+136,Person_136,41,43899.91,2022-11-09,Engineering,D,Manager_D,27,Los Angeles
+137,Person_137,35,50746.17,2022-03-03,Marketing,C,Manager_D,35,Phoenix
+138,Person_138,35,49183.88,2021-02-08,Sales,C,Manager_B,29,New York
+139,Person_139,18,109553.19,2020-06-27,Marketing,D,Manager_C,44,Houston
+140,Person_140,33,85165.98,2022-02-16,HR,B,Manager_D,21,Phoenix
+141,Person_141,52,50869.07,2021-07-20,Engineering,C,Manager_B,38,Chicago
+142,Person_142,56,66431.18,2020-12-10,Engineering,D,Manager_C,23,New York
+143,Person_143,64,96575.63,2022-01-20,Engineering,A,Manager_D,34,Los Angeles
+144,Person_144,54,42834.15,2021-06-05,Sales,A,Manager_D,46,Phoenix
+145,Person_145,42,38954.23,2022-09-03,Sales,C,Manager_D,31,Los Angeles
+146,Person_146,36,115492.83,2021-12-18,Finance,D,Manager_D,22,Phoenix
+147,Person_147,55,92064.72,2020-01-20,Sales,C,Manager_A,39,New York
+148,Person_148,24,46619.61,2020-04-18,HR,B,Manager_D,43,Los Angeles
+149,Person_149,32,109991.4,2022-07-10,Engineering,C,Manager_D,46,Houston
+150,Person_150,58,115616.69,2020-09-21,Finance,C,Manager_A,43,New York
+151,Person_151,26,84691.68,2021-10-22,Engineering,D,Manager_B,38,New York
+152,Person_152,43,64866.28,2020-03-13,Marketing,D,Manager_D,36,Chicago
+153,Person_153,30,119762.13,2022-02-13,Sales,A,Manager_C,41,Phoenix
+154,Person_154,23,83983.86,2021-04-29,Finance,C,Manager_A,25,Los Angeles
+155,Person_155,65,34081.48,2021-07-27,Marketing,C,Manager_B,36,Los Angeles
+156,Person_156,67,102348.54,2020-11-14,HR,D,Manager_C,25,Los Angeles
+157,Person_157,20,61974.9,2020-07-15,Engineering,B,Manager_C,42,Los Angeles
+158,Person_158,59,85030.64,2021-05-16,Marketing,D,Manager_D,21,Houston
+159,Person_159,42,38871.81,2022-07-03,HR,A,Manager_D,47,Houston
+160,Person_160,35,67343.24,2022-06-23,Marketing,B,Manager_B,34,Los Angeles
+161,Person_161,26,32262.0,2021-09-26,Engineering,C,Manager_C,27,Houston
+162,Person_162,58,108578.14,2021-10-01,HR,A,Manager_C,21,Chicago
+163,Person_163,37,75269.27,2022-06-04,Engineering,D,Manager_B,45,New York
+164,Person_164,57,115390.9,2020-12-17,Engineering,D,Manager_C,33,Los Angeles
+165,Person_165,27,42750.03,2020-01-05,Sales,D,Manager_D,46,Los Angeles
+166,Person_166,60,44225.06,2020-02-03,Finance,D,Manager_D,43,Phoenix
+167,Person_167,27,40562.0,2022-08-31,Engineering,A,Manager_B,43,Los Angeles
+168,Person_168,44,76530.86,2022-03-04,Finance,C,Manager_B,33,New York
+169,Person_169,68,70586.22,2020-10-17,Engineering,A,Manager_D,34,New York
+170,Person_170,47,61368.7,2020-01-26,HR,A,Manager_C,36,Los Angeles
+171,Person_171,63,73942.82,2020-03-04,Finance,D,Manager_D,30,New York
+172,Person_172,37,115255.82,2022-03-12,Engineering,C,Manager_B,38,Houston
+173,Person_173,45,65049.71,2021-11-12,Sales,C,Manager_A,28,Chicago
+174,Person_174,26,59590.15,2020-02-24,Engineering,A,Manager_C,44,Houston
+175,Person_175,61,52952.21,2021-12-08,Sales,A,Manager_D,45,Chicago
+176,Person_176,35,36227.76,2022-10-29,Engineering,C,Manager_B,48,Phoenix
+177,Person_177,26,93991.14,2021-04-24,Finance,B,Manager_B,34,Phoenix
+178,Person_178,64,111370.93,2020-10-07,HR,A,Manager_D,39,Los Angeles
+179,Person_179,23,75500.85,2020-12-12,Marketing,B,Manager_A,39,Phoenix
+180,Person_180,46,34670.09,2021-10-21,Sales,C,Manager_B,30,Houston
+181,Person_181,62,97111.68,2020-10-05,Marketing,C,Manager_D,21,Houston
+182,Person_182,37,83459.18,2020-02-12,Marketing,C,Manager_C,34,Los Angeles
+183,Person_183,68,93008.13,2021-03-12,Engineering,B,Manager_B,28,New York
+184,Person_184,21,51522.13,2022-02-03,Finance,B,Manager_A,49,Chicago
+185,Person_185,53,110554.69,2022-12-07,Engineering,B,Manager_D,32,Phoenix
+186,Person_186,54,34260.76,2021-01-26,HR,D,Manager_B,30,Los Angeles
+187,Person_187,39,33812.75,2021-11-18,HR,A,Manager_D,24,Houston
+188,Person_188,52,39449.13,2021-07-19,Engineering,D,Manager_D,39,Houston
+189,Person_189,38,85972.09,2022-09-25,Marketing,C,Manager_C,31,Chicago
+190,Person_190,50,45753.84,2022-12-16,Engineering,C,Manager_B,43,Los Angeles
+191,Person_191,41,32134.17,2022-05-29,Finance,A,Manager_D,35,Los Angeles
+192,Person_192,25,44729.19,2020-04-26,HR,A,Manager_B,26,Los Angeles
+193,Person_193,26,68183.46,2020-08-27,Engineering,C,Manager_A,49,Chicago
+194,Person_194,69,95611.92,2021-12-30,Sales,A,Manager_A,38,Los Angeles
+195,Person_195,41,61428.83,2020-01-04,Sales,D,Manager_A,44,New York
+196,Person_196,61,108730.0,2021-07-23,Engineering,A,Manager_A,32,Los Angeles
+197,Person_197,38,71650.46,2020-05-01,HR,B,Manager_A,45,Phoenix
+198,Person_198,27,105004.89,2022-06-22,Marketing,D,Manager_D,35,New York
+199,Person_199,39,84414.21,2022-05-05,Marketing,A,Manager_B,36,Phoenix
+200,Person_200,29,107616.34,2022-03-17,Sales,B,Manager_C,46,Phoenix
+201,Person_201,54,58645.44,2022-06-19,Sales,D,Manager_B,23,New York
+202,Person_202,27,99678.27,2022-10-16,Finance,D,Manager_D,38,Houston
+203,Person_203,27,115707.62,2020-11-09,Finance,A,Manager_B,42,Houston
+204,Person_204,35,53947.02,2021-12-17,HR,D,Manager_A,47,Phoenix
+205,Person_205,29,119187.94,2021-03-13,Sales,B,Manager_B,41,Los Angeles
+206,Person_206,54,41600.12,2020-08-16,Engineering,B,Manager_A,32,Los Angeles
+207,Person_207,46,118932.87,2021-08-05,Marketing,D,Manager_A,23,Chicago
+208,Person_208,29,108202.14,2020-03-20,Marketing,A,Manager_A,25,Los Angeles
+209,Person_209,63,93457.36,2022-03-08,Engineering,A,Manager_A,45,Houston
+210,Person_210,22,65037.45,2022-07-14,Finance,C,Manager_A,22,Chicago
+211,Person_211,60,84276.4,2022-05-25,Sales,B,Manager_C,47,Chicago
+212,Person_212,19,65967.46,2022-08-29,Sales,A,Manager_D,42,New York
+213,Person_213,65,64287.88,2021-07-19,HR,A,Manager_B,32,Chicago
+214,Person_214,61,86228.28,2020-07-28,Engineering,C,Manager_A,22,Houston
+215,Person_215,44,48022.0,2022-04-03,Finance,D,Manager_B,43,Chicago
+216,Person_216,64,64242.04,2020-02-17,Engineering,B,Manager_D,34,Chicago
+217,Person_217,67,118278.64,2022-03-13,Sales,C,Manager_C,35,New York
+218,Person_218,67,75083.01,2020-08-28,Sales,B,Manager_A,33,Phoenix
+219,Person_219,54,45280.34,2020-05-30,Engineering,C,Manager_B,27,Los Angeles
+220,Person_220,36,64960.51,2021-03-10,Finance,C,Manager_B,36,Phoenix
+221,Person_221,65,107431.61,2022-10-01,HR,D,Manager_D,38,Los Angeles
+222,Person_222,28,64221.53,2021-04-06,Sales,A,Manager_D,20,New York
+223,Person_223,37,104675.91,2021-01-05,Finance,B,Manager_C,44,Los Angeles
+224,Person_224,60,37311.76,2021-05-28,Marketing,D,Manager_B,25,Chicago
+225,Person_225,48,33430.22,2020-05-30,HR,D,Manager_A,25,Chicago
+226,Person_226,31,56213.15,2020-09-02,Finance,C,Manager_C,32,Houston
+227,Person_227,65,109303.01,2022-12-06,Finance,A,Manager_A,34,Chicago
+228,Person_228,38,60548.61,2022-08-02,HR,D,Manager_C,43,Chicago
+229,Person_229,25,112713.79,2020-04-27,Sales,A,Manager_B,44,Chicago
+230,Person_230,57,33858.24,2021-07-27,Engineering,B,Manager_A,20,Los Angeles
+231,Person_231,65,78486.87,2020-04-07,Finance,A,Manager_B,28,Chicago
+232,Person_232,22,96654.12,2020-02-17,HR,A,Manager_C,25,Chicago
+233,Person_233,34,114969.36,2020-09-18,Engineering,B,Manager_C,41,Los Angeles
+234,Person_234,54,40918.51,2020-01-18,Sales,B,Manager_B,42,Phoenix
+235,Person_235,29,119009.63,2021-04-21,Finance,A,Manager_D,34,Houston
+236,Person_236,44,30238.61,2021-03-14,Finance,C,Manager_B,22,Los Angeles
+237,Person_237,43,71220.09,2021-08-28,Marketing,C,Manager_D,30,New York
+238,Person_238,37,107703.13,2021-06-18,Marketing,A,Manager_D,37,Phoenix
+239,Person_239,41,63889.49,2022-01-26,HR,B,Manager_A,25,Phoenix
+240,Person_240,34,72594.54,2020-03-05,Marketing,A,Manager_B,45,Los Angeles
+241,Person_241,39,116634.17,2021-05-26,HR,B,Manager_A,48,Los Angeles
+242,Person_242,50,109345.9,2022-04-02,Finance,B,Manager_A,23,Los Angeles
+243,Person_243,30,111823.42,2022-03-11,Sales,B,Manager_C,39,Houston
+244,Person_244,67,58462.85,2022-03-27,Finance,B,Manager_B,29,Chicago
+245,Person_245,48,41719.7,2020-02-18,Marketing,B,Manager_C,27,Chicago
+246,Person_246,43,44389.71,2021-11-04,Sales,A,Manager_B,36,Los Angeles
+247,Person_247,49,109131.66,2022-05-28,Sales,C,Manager_B,21,Phoenix
+248,Person_248,65,104276.34,2020-02-23,Marketing,A,Manager_C,22,Los Angeles
+249,Person_249,19,93940.1,2021-02-16,Marketing,D,Manager_D,47,Phoenix
+250,Person_250,60,94135.02,2021-05-14,Sales,D,Manager_A,46,Chicago
+251,Person_251,55,102498.38,2021-01-07,Marketing,D,Manager_A,48,New York
+252,Person_252,37,70178.53,2021-07-17,Marketing,A,Manager_A,22,Chicago
+253,Person_253,51,75163.2,2020-05-31,Sales,C,Manager_A,47,New York
+254,Person_254,22,39753.54,2021-01-30,HR,B,Manager_A,44,New York
+255,Person_255,46,43523.61,2020-01-09,Sales,C,Manager_D,48,Houston
+256,Person_256,22,91560.82,2020-12-10,Marketing,A,Manager_D,46,Los Angeles
+257,Person_257,54,40441.48,2022-11-08,Marketing,B,Manager_D,41,New York
+258,Person_258,48,99459.9,2020-04-23,Engineering,B,Manager_D,32,Los Angeles
+259,Person_259,68,52435.1,2020-05-09,Engineering,B,Manager_C,33,New York
+260,Person_260,65,46823.92,2021-11-25,HR,D,Manager_B,26,Phoenix
+261,Person_261,65,46702.57,2020-07-08,Finance,C,Manager_C,36,Houston
+262,Person_262,62,95224.45,2020-08-20,Engineering,B,Manager_A,47,Chicago
+263,Person_263,22,38294.92,2022-10-11,Finance,A,Manager_C,27,New York
+264,Person_264,40,114315.59,2022-09-29,Engineering,B,Manager_A,37,Houston
+265,Person_265,38,39073.8,2022-12-25,Marketing,B,Manager_B,22,Chicago
+266,Person_266,68,91782.61,2021-05-10,Marketing,D,Manager_A,26,Chicago
+267,Person_267,22,34252.38,2020-07-03,Marketing,C,Manager_C,40,Chicago
+268,Person_268,20,99941.8,2020-01-02,HR,A,Manager_C,33,Chicago
+269,Person_269,40,104165.29,2022-07-24,Marketing,A,Manager_B,43,Los Angeles
+270,Person_270,52,71752.13,2022-06-15,Engineering,D,Manager_B,28,New York
+271,Person_271,27,54874.87,2022-10-11,Sales,A,Manager_D,46,Los Angeles
+272,Person_272,22,91706.22,2022-02-14,Engineering,D,Manager_A,35,Houston
+273,Person_273,53,56630.5,2022-06-17,HR,C,Manager_C,44,Houston
+274,Person_274,22,111464.66,2022-10-02,HR,B,Manager_A,21,Phoenix
+275,Person_275,41,58266.71,2021-04-13,HR,D,Manager_A,49,Houston
+276,Person_276,26,88547.03,2020-08-08,Marketing,B,Manager_D,42,Chicago
+277,Person_277,39,107848.99,2021-06-15,Engineering,A,Manager_A,42,Los Angeles
+278,Person_278,24,56763.59,2021-04-12,Finance,A,Manager_B,21,Chicago
+279,Person_279,47,54275.9,2022-01-10,Engineering,D,Manager_C,24,New York
+280,Person_280,33,64132.16,2021-05-20,Finance,D,Manager_A,28,Los Angeles
+281,Person_281,33,30408.49,2022-08-01,Sales,D,Manager_D,37,Los Angeles
+282,Person_282,20,55763.33,2021-05-27,Marketing,C,Manager_D,35,Chicago
+283,Person_283,26,91577.91,2021-10-18,Sales,B,Manager_D,47,Houston
+284,Person_284,28,52611.19,2022-12-28,HR,D,Manager_D,21,Houston
+285,Person_285,28,73875.63,2022-12-01,Finance,A,Manager_B,43,Los Angeles
+286,Person_286,29,33631.24,2021-11-22,Sales,A,Manager_D,26,Phoenix
+287,Person_287,18,56019.51,2020-02-18,Sales,B,Manager_B,24,Chicago
+288,Person_288,59,57972.77,2021-06-29,HR,D,Manager_C,43,Chicago
+289,Person_289,65,73926.68,2020-10-25,Marketing,B,Manager_C,35,Chicago
+290,Person_290,69,70429.44,2021-05-04,Marketing,C,Manager_B,46,Los Angeles
+291,Person_291,69,39378.66,2021-08-20,Marketing,B,Manager_C,43,Phoenix
+292,Person_292,34,111344.94,2021-01-06,Finance,A,Manager_B,38,Chicago
+293,Person_293,56,104945.11,2020-07-14,HR,C,Manager_D,40,New York
+294,Person_294,20,108874.38,2022-07-24,Marketing,B,Manager_B,22,Chicago
+295,Person_295,28,72342.49,2021-10-03,Marketing,A,Manager_A,20,Phoenix
+296,Person_296,68,30594.81,2020-07-24,Finance,C,Manager_D,33,New York
+297,Person_297,22,50170.52,2021-05-26,Sales,D,Manager_A,33,Phoenix
+298,Person_298,45,105939.05,2021-11-13,Sales,B,Manager_A,25,New York
+299,Person_299,68,44996.99,2020-10-01,Finance,A,Manager_D,47,New York
+300,Person_300,28,78982.31,2020-04-16,HR,C,Manager_D,29,Houston
