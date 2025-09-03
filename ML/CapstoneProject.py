@@ -1,93 +1,191 @@
-"""
-Objectives
-1. Perform Exploratory Data Analysis (EDA)
-o Load the dataset and check for missing values.
-o Generate summary statistics (mean, median, standard deviation, etc.).
-o Visualize the distribution of features using histograms and boxplots.
-o Analyze correlations between features using a heatmap.
-o Identify outliers and handle them appropriately.
-o Check for multicollinearity among features.
-2. Preprocess the Data
-o Normalize or standardize numerical features if necessary.
-o Encode categorical variables if present.
-o Split the dataset into training and testing sets (80% train, 20% test).
-3. Model Training & Evaluation
-o Set BMI as the target variable.
-o Train and evaluate the following regression models:
-▪ Simple Linear Regression (using one independent variable)
-▪ Multiple Linear Regression (using all independent variables)
-▪ Ridge Regression (to handle multicollinearity)
-▪ Lasso Regression (to perform feature selection)
-▪ Elastic Net Regression (combination of Ridge and Lasso)
-o Calculate and compare R² scores for each model.
-o Analyze the effect of hyperparameter tuning for Ridge, Lasso, and Elastic Net.
-4. Results & Interpretation
-o Compare the performance of different models.
-o Interpret the coefficients of the best-performing model.
-o Discuss the impact of different features on BMI.
-Deliverables
-• Jupyter Notebook / Python Script containing:
-o EDA and visualizations
-o Regression model implementation and evaluation
-• Presentation / Report summarizing findings, challenges, and conclusions
-Bonus Challenges
-• Try using Polynomial Regression for better accuracy.
-• Use Feature Engineering to create new meaningful variables.
-• Apply Cross-Validation to assess model generalizability.
-Evaluation Criteria
-• Completeness of EDA
-• Proper implementation of regression models
-• Interpretation of results
-• Code clarity and documentation
-• Creativity and additional insights
-
-"""
-import numpy as np
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import scipy.stats as stats
 
-# ML
-from sklearn.model_selection import train_test_split #split data into training and testing sets
-from sklearn.linear_model import LinearRegression, Ridge, Lasso #linear regression models
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score #metrics for evaluating regression models #performance metrics
-from sklearn.preprocessing import LabelEncoder
-#setting default figure size for plots
-plt.rcParams['figure.figsize'] = (10, 6) #ensures all plots have the same size
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
+from sklearn.metrics import r2_score
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
-#suppressing unnecessary warnings to keep the output clean
-import warnings
-warnings.filterwarnings('ignore') #ignores warning messages that may not impact functionality.
-def  dataSet():
-      # Load the dataset
-    df = pd.read_csv('BMI_dataset.csv')
-    # print(df.head())
+class BMIPredictor:
+    def __init__(self, filepath):
+        """
+        Initialize the class with the dataset path.
+        """
+        self.filepath = filepath
+        self.df = None
+        self.X = None
+        self.y = None
+        self.X_scaled = None
+        self.X_train = None
+        self.X_test = None
+        self.y_train = None
+        self.y_test = None
+        self.models = {}
+        self.results = {}
 
-      #Load the dataset and check for missing values.
-    # print(df.isnull().sum())
+    def load_data(self):
+        """
+        Load dataset from CSV and display basic info.
+        """
+        self.df = pd.read_csv(self.filepath)
+        print("Data Loaded Successfully.\n")
+        print(self.df.info())
+        print(self.df.describe())
+        print("Missing Values:\n", self.df.isnull().sum())
 
-      #Generate summary statistics (mean, median, standard deviation, etc.)
-    # print(df.describe())
+    def perform_eda(self):
+        """
+        Perform Exploratory Data Analysis with visualizations and statistics.
+        """
+        print("\n--- EDA ---")
+        # Histograms
+        self.df.hist(figsize=(12, 8))
+        plt.suptitle("Feature Distributions")
+        plt.tight_layout()
+        plt.show()
 
-      #Visualize the distribution of features using histograms and boxplots.
-    # df.hist(bins=30, figsize=(15, 10))
-    # plt.tight_layout()
- jƒkdlkdfajsdlfedfkhfjf nvj;vjfl5j5rll  # sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
-  uc.  v,b # plt.show()
- oufof¨√p
-    #Identify outliers and handle them appropriately.
+        # Boxplots for outlier detection
+        for col in self.df.select_dtypes(include=np.number).columns:
+            sns.boxplot(x=self.df[col])
+            plt.title(f'Boxplot of {col}')
+            plt.show()
 
-    # sns.boxplot(x=df['bmi_value'])
-    # plt.title('Boxplot of BMI')
-    # plt.show()
+        # Correlation heatmap
+        plt.figure(figsize=(10, 8))
+        sns.heatmap(self.df.corr(), annot=True, cmap='coolwarm')
+        plt.title('Feature Correlation Heatmap')
+        plt.show()
 
-      #Check for multicollinearity among features.
-    sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
-    plt.title('Correlation Heatmap')
-    plt.show()
+        # Multicollinearity check using VIF
+        X_num = self.df.select_dtypes(include=np.number).drop(columns=['BMI'])
+        vif_data = pd.DataFrame()
+        vif_data['Feature'] = X_num.columns
+        vif_data['VIF'] = [variance_inflation_factor(X_num.values, i) for i in range(X_num.shape[1])]
+        print("\nVariance Inflation Factors:\n", vif_data)
 
+    def preprocess_data(self):
+        """
+        Encode categorical variables, scale features, and split data.
+        """
+        print("\n--- Preprocessing ---")
+        # Encode categorical variables
+        self.df = pd.get_dummies(self.df, drop_first=True)
 
+        # Feature engineering (optional)
+        if 'Height' in self.df.columns and 'Weight' in self.df.columns:
+            self.df['Height_to_Weight'] = self.df['Height'] / self.df['Weight']
+
+        # Separate features and target
+        self.X = self.df.drop(columns=['BMI'])
+        self.y = self.df['BMI']
+
+        # Standardize features
+        scaler = StandardScaler()
+        self.X_scaled = scaler.fit_transform(self.X)
+
+        # Train-test split
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+            self.X_scaled, self.y, test_size=0.2, random_state=42
+        )
+        print("Data Preprocessing Complete.")
+
+    def train_models(self):
+        """
+        Train multiple regression models and store their performance.
+        """
+        print("\n--- Model Training ---")
+
+        # Simple Linear Regression (first feature only)
+        X_simple = self.X_train[:, 0].reshape(-1, 1)
+        model_simple = LinearRegression()
+        model_simple.fit(X_simple, self.y_train)
+        y_pred_simple = model_simple.predict(self.X_test[:, 0].reshape(-1, 1))
+        self.models['Simple Linear'] = model_simple
+        self.results['Simple Linear'] = r2_score(self.y_test, y_pred_simple)
+
+        # Multiple Linear Regression
+        model_multi = LinearRegression()
+        model_multi.fit(self.X_train, self.y_train)
+        y_pred_multi = model_multi.predict(self.X_test)
+        self.models['Multiple Linear'] = model_multi
+        self.results['Multiple Linear'] = r2_score(self.y_test, y_pred_multi)
+
+        # Ridge Regression
+        model_ridge = Ridge(alpha=1.0)
+        model_ridge.fit(self.X_train, self.y_train)
+        y_pred_ridge = model_ridge.predict(self.X_test)
+        self.models['Ridge'] = model_ridge
+        self.results['Ridge'] = r2_score(self.y_test, y_pred_ridge)
+
+        # Lasso Regression
+        model_lasso = Lasso(alpha=0.1)
+        model_lasso.fit(self.X_train, self.y_train)
+        y_pred_lasso = model_lasso.predict(self.X_test)
+        self.models['Lasso'] = model_lasso
+        self.results['Lasso'] = r2_score(self.y_test, y_pred_lasso)
+
+        # Elastic Net Regression
+        model_elastic = ElasticNet(alpha=0.1, l1_ratio=0.5)
+        model_elastic.fit(self.X_train, self.y_train)
+        y_pred_elastic = model_elastic.predict(self.X_test)
+        self.models['Elastic Net'] = model_elastic
+        self.results['Elastic Net'] = r2_score(self.y_test, y_pred_elastic)
+
+        print("Model Training Complete.")
+
+    def evaluate_models(self):
+        """
+        Display R² scores and interpret best model.
+        """
+        print("\n--- Model Evaluation ---")
+        for name, score in self.results.items():
+            print(f"{name} R² Score: {score:.4f}")
+
+        # Best model
+        best_model_name = max(self.results, key=self.results.get)
+        print(f"\nBest Model: {best_model_name}")
+        best_model = self.models[best_model_name]
+
+        # Coefficients interpretation
+        if hasattr(best_model, 'coef_'):
+            coef_series = pd.Series(best_model.coef_, index=self.X.columns)
+            print("\nFeature Coefficients:\n", coef_series.sort_values(ascending=False))
+
+    def polynomial_regression(self, degree=2):
+        """
+        Optional: Apply Polynomial Regression for non-linear relationships.
+        """
+        print(f"\n--- Polynomial Regression (Degree {degree}) ---")
+        poly = PolynomialFeatures(degree=degree)
+        X_poly = poly.fit_transform(self.X_scaled)
+        X_train_poly, X_test_poly, y_train_poly, y_test_poly = train_test_split(
+            X_poly, self.y, test_size=0.2, random_state=42
+        )
+        model_poly = LinearRegression()
+        model_poly.fit(X_train_poly, y_train_poly)
+        y_pred_poly = model_poly.predict(X_test_poly)
+        score = r2_score(y_test_poly, y_pred_poly)
+        print(f"Polynomial Regression R² Score: {score:.4f}")
+
+    def cross_validation(self):
+        """
+        Optional: Apply cross-validation to assess generalizability.
+        """
+        print("\n--- Cross-Validation ---")
+        model = LinearRegression()
+        scores = cross_val_score(model, self.X_scaled, self.y, cv=5, scoring='r2')
+        print("Cross-Validation R² Scores:", scores)
+        print("Mean CV R²:", np.mean(scores))
 
 if __name__ == '__main__':
-    dataSet()
+    bmi_model = BMIPredictor('bmi_dataset.csv')
+    bmi_model.load_data()
+    bmi_model.perform_eda()
+    bmi_model.preprocess_data()
+    bmi_model.train_models()
+    bmi_model.evaluate_models()
+    bmi_model.polynomial_regression(degree=2)  # Optional
+    bmi_model.cross_validation()
